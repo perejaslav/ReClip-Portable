@@ -29,6 +29,25 @@
    http://127.0.0.1:8899
    ```
 
+## Портативный инсталлятор (12 КБ)
+
+Для развёртывания на другом компьютере используйте `dist/ReClip-Portable-Installer.zip`:
+
+1. Распакуйте архив
+2. Запустите `install-reclip.bat` — скачает Python, FFmpeg и зависимости (~350 МБ)
+3. После установки запустите `start-reclip.bat`
+
+Файлы в пакете:
+```
+install-reclip.bat    # Установщик (скачивает всё при первом запуске)
+start-reclip.bat      # Запуск ReClip
+update-ytdlp.bat      # Обновление yt-dlp
+app/                  # Код приложения (app.py, templates, static)
+README.txt            # Инструкция
+```
+
+Пересобрать пакет: запустите `build-installer-package.bat`
+
 ## Структура проекта
 
 ```
@@ -38,7 +57,11 @@ ReClip-Portable/
 ├── ffmpeg/              # FFmpeg для обработки видео
 ├── data/downloads/      # Скачанные файлы
 ├── start-reclip-autobrowser.bat   # Запуск
-└── update-ytdlp.bat     # Обновление yt-dlp
+├── update-ytdlp.bat     # Обновление yt-dlp
+├── install-reclip.bat   # Инсталлятор (для дистрибутива)
+├── build-installer-package.bat  # Сборка ZIP-пакета (12 КБ)
+├── build-reclip-portable-install-v2.bat  # Полная сборка с нуля
+└── dist/                # Готовый портативный пакет
 ```
 
 ## Обновление yt-dlp
