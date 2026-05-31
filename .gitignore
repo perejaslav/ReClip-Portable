@@ -1,1 +1,12 @@
 dist/
+app/downloads/
+app/assets/
+app/__pycache__/
+app/Dockerfile
+app/reclip.sh
+app/README.md
+app/LICENSE
+*.pyc
+.env
+.env.*
+logs/
